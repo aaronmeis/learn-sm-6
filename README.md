@@ -31,3 +31,7 @@ python -m http.server 8766          # then open http://127.0.0.1:8766/
 ```
 
 Progress is stored in the browser under the `ls6:` prefix.
+
+## Disclaimer
+
+Disclaimer. This is an independent, personal study project. It is not affiliated with, endorsed by, or sponsored by RTX, Raytheon, the U.S. Navy, the U.S. Army, the Missile Defense Agency, the Department of Defense, or any other organization named here; all names and trademarks belong to their owners. It is built only from publicly available, unclassified sources and contains no classified, export-controlled, or sensitive information, and it does not estimate classified performance. It is for education only: not for operational, procurement, legal, or investment use, and not professional advice. Some content (summaries, quiz and flashcard text, videos, audio, slides) was generated or assisted by AI and may contain errors despite review; check anything that matters against the cited primary sources. Provided as is, without warranty.
