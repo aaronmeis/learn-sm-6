@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SM-6: capabilities, architecture, and countermeasure assessment | Learn SM-6</title>
+<meta name="description" content="Open-source assessment of the Raytheon SM-6 missile family: missions, kill-chain architecture, variants, test evidence, countermeasure classes, and economics.">
+<link rel="icon" href="../assets/icons/icon-192.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="library.css">
+<script>try{var p=JSON.parse(localStorage.getItem("appPalette"))||"github",m=JSON.parse(localStorage.getItem("appMode"))||"dark";document.documentElement.setAttribute("data-theme",p+"-"+m);}catch(e){document.documentElement.setAttribute("data-theme","github-dark");}</script>
+</head>
+<body>
+<header class="topbar">
+  <a href="../index.html" class="home">&larr; Learn SM-6 console</a>
+  <span class="crumb">Library · Spine</span>
+  <a href="index.html" class="home">All pages</a>
+</header>
+<main class="doc">
+  <div class="kicker">Spine</div>
+  <h1 class="doctitle">SM-6: capabilities, architecture, and countermeasure assessment</h1>
+  <p class="lead">Open-source assessment of the Raytheon SM-6 missile family: missions, kill-chain architecture, variants, test evidence, countermeasure classes, and economics.</p>
+  
+  <article>
+<h2>Business Explanation</h2>
+<div class="callout info" markdown="0"><div class="callout-title">Business Explanation</div><p>SM-6 is one missile family that does three jobs for the U.S. Navy and now the Army: long-range air defense, last-chance ballistic-missile defense, and ship strike. Its reach comes less from the missile than from the network of sensors and command systems that feed it, so its real value and its real weak points both sit in that network. This note separates what public tests have proven from what promotional claims imply.</p></div>
+
+<div class="callout note" markdown="0"><div class="callout-title">Provenance</div><p>Filed 2026-10-04 from <code>C:\Users\learn\Downloads\</code> as the first page of <a href="weapons-hub.html">Weapons</a>. Body kept verbatim; the numbered reference list was converted to footnote definitions so the <code>[^n]</code> markers resolve. Open sources only. Mind-map input for the one-day pack <a href="hub.html">Raytheon SM-6 — One-Day Mastery</a>.</p></div>
+
+<h2>Executive assessment</h2>
+<p>The Raytheon Standard Missile-6 (SM-6), formally the RIM-174 Extended Range Active Missile, is best understood not as a single-purpose missile but as a <strong>network-enabled family of effectors</strong> embedded in the U.S. Aegis and joint-force kill web. Its defining value is the combination of three mission sets—extended-range air defense, terminal ballistic-missile defense, and anti-surface warfare—with an active seeker that supports engagements beyond the launching ship’s radar horizon.<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup><sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup><sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup></p>
+<p>The missile itself is only one layer of the capability. Its operational reach depends on remote sensing, track-quality data, command-and-control software, communications, launch infrastructure, and terminal homing. The canonical naval architecture links Aegis Baseline 9, Cooperative Engagement Capability (CEC), an E-2D Advanced Hawkeye or other remote sensor, and SM-6; the Army is also integrating SM-6 with the Typhon Mid-Range Capability and has demonstrated a simulated linkage with LTAMDS and IBCS.<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup><sup id="fnref:5"><a class="footnote-ref" href="#fn:5">5</a></sup></p>
+<p>SM-6’s strongest architectural advantage is therefore <strong>separation of sensor and shooter</strong>. A ship can engage a target that its own radar cannot yet see by consuming a sufficiently precise remote track, launching the missile toward a predicted intercept basket, and allowing the missile’s onboard active radar seeker to complete the terminal engagement. This expands defended area and complicates an adversary’s planning, but it also means the total capability is bounded by the integrity of the wider kill chain rather than by missile kinematics alone.<sup id="fnref:6"><a class="footnote-ref" href="#fn:6">6</a></sup><sup id="fnref:7"><a class="footnote-ref" href="#fn:7">7</a></sup></p>
+<p>The public evidence supports confidence in demonstrated capabilities but not blanket claims of invulnerability. SM-6 has intercepted aircraft and cruise-missile representative targets, surface targets, and ballistic missiles in terminal flight; in March 2024, an Aegis Baseline 9 ship intercepted an advanced medium-range ballistic-missile target using SM-6 Dual II with a software upgrade. A March 2025 event demonstrated detection, tracking, and a simulated engagement of a maneuvering hypersonic-representative target, but it was explicitly a risk-reduction step toward a later live intercept—not proof of a fully operational, universal hypersonic-defense capability.<sup id="fnref:8"><a class="footnote-ref" href="#fn:8">8</a></sup><sup id="fnref:9"><a class="footnote-ref" href="#fn:9">9</a></sup></p>
+<p>Independent test reporting is the most important corrective to promotional language. DOT&amp;E stated that the 2024 ballistic-missile intercept was not designed to determine operational effectiveness, lethality, suitability, or survivability, and that Block IB still required operational and live-fire testing. Earlier DOT&amp;E reporting also found insufficient data to determine survivability of expanded Block I/IA capabilities in a contested, congested electromagnetic environment or to assess cyber survivability.<sup id="fnref:10"><a class="footnote-ref" href="#fn:10">10</a></sup><sup id="fnref:11"><a class="footnote-ref" href="#fn:11">11</a></sup></p>
+<h2>Identity and mission</h2>
+<p>SM-6 originated by combining the airframe and propulsion lineage of the SM-2 Block IV with an AMRAAM-derived active radar seeker and modern guidance electronics. Development began in 2004, low-rate production followed in FY2009, full-rate production began in FY2013, and the Navy achieved initial operational capability in November 2013.<sup id="fnref:12"><a class="footnote-ref" href="#fn:12">12</a></sup><sup id="fnref:13"><a class="footnote-ref" href="#fn:13">13</a></sup></p>
+<p>The public Navy specification for the baseline missile identifies a dual-mode active/semi-active seeker, a solid-rocket booster, and a dual-thrust solid-rocket motor. The Navy lists an approximate length of 21 feet 6 inches, wingspan of 3 feet 6 inches, and weight of about 3,300 pounds for the surface-launched Block I configuration. Official public material does not state the missile’s operational range; precise range, engagement envelope, seeker performance, electronic-protection features, and probability of kill remain classified.<sup id="fnref2:1"><a class="footnote-ref" href="#fn:1">1</a></sup></p>
+<h3>Mission portfolio</h3>
+<table>
+<thead>
+<tr>
+<th>Mission</th>
+<th>Publicly demonstrated role</th>
+<th>Architectural significance</th>
+<th>Important boundary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Extended-range air warfare</td>
+<td>Engagement of crewed aircraft, UAVs, and cruise missiles, including over-the-horizon targets.<sup id="fnref6:1"><a class="footnote-ref" href="#fn:1">1</a></sup></td>
+<td>Remote sensors and CEC can provide launch-quality tracks before the launching ship has organic line of sight.</td>
+<td>Performance against the full set of advanced threats and electronic-attack conditions is not public.</td>
+</tr>
+<tr>
+<td>Terminal ballistic-missile defense</td>
+<td>Endo-atmospheric defense against short- and medium-range ballistic missiles during terminal flight.<sup id="fnref:14"><a class="footnote-ref" href="#fn:14">14</a></sup><sup id="fnref3:9"><a class="footnote-ref" href="#fn:9">9</a></sup></td>
+<td>Adds a lower/terminal layer beneath or complementary to SM-3’s exo-atmospheric midcourse role.</td>
+<td>This is not a substitute for broad-area midcourse defense; geometry and reaction time are demanding.</td>
+</tr>
+<tr>
+<td>Anti-surface warfare</td>
+<td>Demonstrated ability to hit ships and other surface targets; the Army sank a maritime target with a ground-launched SM-6 in July 2025.<sup id="fnref3:3"><a class="footnote-ref" href="#fn:3">3</a></sup></td>
+<td>Converts a fleet air-defense round into a fast, networked maritime-strike effector.</td>
+<td>Public testing does not establish effectiveness against every ship class, defense suite, or damage objective.</td>
+</tr>
+<tr>
+<td>Counter-hypersonic development</td>
+<td>Tracking and simulated engagement of a maneuvering hypersonic-representative target with an upgraded SM-6 concept.<sup id="fnref6:8"><a class="footnote-ref" href="#fn:8">8</a></sup></td>
+<td>Uses space and maritime sensors plus Aegis fire control for terminal-layer defense.</td>
+<td>Public evidence demonstrates progress, not a mature capability against all hypersonic glide vehicles.</td>
+</tr>
+<tr>
+<td>Air-launched long-range air-to-air</td>
+<td>AIM-174B deployed on F/A-18E/F, using the SM-6 active seeker and omitting the surface-launch booster.<sup id="fnref:15"><a class="footnote-ref" href="#fn:15">15</a></sup><sup id="fnref:16"><a class="footnote-ref" href="#fn:16">16</a></sup></td>
+<td>Extends the SM-6 technology base into carrier aviation and shifts the launch point closer to the threat axis.</td>
+<td>Range and detailed employment parameters are classified.</td>
+</tr>
+</tbody>
+</table>
+<h2>System architecture</h2>
+<h3>Missile layer</h3>
+<p>The surface-launched SM-6 is a two-stage, vertically launched weapon. The booster ejects and accelerates the missile from the Mk 41 Vertical Launching System; the dual-thrust sustainer provides the main flight energy. Guidance combines onboard navigation and weapon-control updates with a dual-mode active/semi-active radar seeker for terminal homing.<sup id="fnref3:1"><a class="footnote-ref" href="#fn:1">1</a></sup></p>
+<p>The active seeker is the key departure from older Standard Missile concepts that relied more heavily on continuous shipboard illumination. Active terminal homing reduces dependence on a launching ship’s finite illuminator capacity and allows the missile to complete engagements beyond the ship radar’s horizon after receiving remote or in-flight targeting support. Semi-active functionality preserves compatibility with established Aegis engagement methods and provides an additional guidance mode, but the exact logic used to select or blend modes is not public.<sup id="fnref:17"><a class="footnote-ref" href="#fn:17">17</a></sup></p>
+<p>SM-6 uses a blast-fragmentation kill mechanism rather than the exo-atmospheric hit-to-kill vehicle associated with SM-3. That choice supports a broad target set—aircraft, cruise missiles, terminal ballistic targets, and surface targets—but makes fuzing, aim-point selection, closing geometry, and warhead-to-target coupling central to mission effectiveness.<sup id="fnref2:2"><a class="footnote-ref" href="#fn:2">2</a></sup></p>
+<h3>Sensor layer</h3>
+<p>Aegis ships historically use SPY-family radars to search, detect, track, discriminate, and support engagements. Newer SPY-6 variants improve sensitivity, discrimination, and simultaneous air-and-missile-defense performance and are designed to maximize the performance of Standard Missile variants.<sup id="fnref:18"><a class="footnote-ref" href="#fn:18">18</a></sup><sup id="fnref:19"><a class="footnote-ref" href="#fn:19">19</a></sup></p>
+<p>Remote sensors are equally important. In the demonstrated NIFC-CA architecture, an E-2D Advanced Hawkeye supplies airborne sensing beyond the surface ship’s radar horizon. CEC aggregates and exchanges high-quality sensor data across ships and aircraft, enabling a composite track rather than requiring every shooter to depend solely on its own radar.<sup id="fnref2:7"><a class="footnote-ref" href="#fn:7">7</a></sup><sup id="fnref2:6"><a class="footnote-ref" href="#fn:6">6</a></sup></p>
+<p>Space-based tracking is becoming more relevant for hypersonic defense. During the 2025 FTX-40 event, data from the Hypersonic and Ballistic Tracking Space Sensor demonstration satellite were processed through fire control and provided to the ship as part of the simulated Aegis engagement. This illustrates the future direction: SM-6 is increasingly an endpoint in a multi-domain sensor-to-shooter architecture.<sup id="fnref2:8"><a class="footnote-ref" href="#fn:8">8</a></sup></p>
+<h3>Command layer</h3>
+<p>Aegis integrates radar, displays, weapons-control software, launchers, and missiles into a combat system. CEC augments Aegis with a real-time sensor network and shared track picture, while NIFC-CA turns the combined system into an engage-on-remote kill chain.<sup id="fnref:20"><a class="footnote-ref" href="#fn:20">20</a></sup><sup id="fnref3:7"><a class="footnote-ref" href="#fn:7">7</a></sup></p>
+<p>At a high level, the engagement sequence is:</p>
+<ol>
+<li>One or more local, airborne, surface, or space sensors detect and classify a track.</li>
+<li>CEC or another approved network shares sufficiently precise track data.</li>
+<li>Aegis or the relevant joint command system performs threat evaluation, weapon assignment, and engagement planning.</li>
+<li>The launcher fires SM-6 toward a calculated intercept volume.</li>
+<li>The weapon receives guidance support or updates as available.</li>
+<li>The active/semi-active seeker acquires the target and supports terminal intercept.</li>
+<li>Sensors conduct kill assessment and determine whether re-engagement is required.</li>
+</ol>
+<p>This is a functional abstraction, not a description of classified engagement logic, message formats, thresholds, or timelines.</p>
+<h3>Launch layer</h3>
+<p>The primary naval launcher is the Mk 41 Vertical Launching System on Aegis cruisers and destroyers. Land-based and containerized launch options broaden the operating model: the Army’s Typhon system places a modified vertical launcher in a 40-foot container on a mobile trailer and can fire both SM-6 and Tomahawk.</p>
+<p>A Typhon battery includes a battery operations center, four launchers, prime movers, and support vehicles; it is road-mobile and air-transportable. The Army deployed Typhon to the Philippines in April 2024 and conducted a ground-launched SM-6 maritime strike during Talisman Sabre 2025. These developments transform SM-6 from a naval interceptor into a joint, expeditionary, land-based sea-denial option.<sup id="fnref2:5"><a class="footnote-ref" href="#fn:5">5</a></sup></p>
+<h3>Army IAMD integration</h3>
+<p>Raytheon’s 2024 Valiant Shield experiment used LTAMDS simulator tracks, operational SM-6 engagement-control software, and IBCS to demonstrate detection, track transfer, launch command, and simulated guidance to intercept. The event showed architectural feasibility, not a fielded Army air-defense configuration, but it points toward a modular model in which IBCS can choose SM-6 as another effector when sensor quality, authorization, launcher availability, and engagement geometry support it.<sup id="fnref2:4"><a class="footnote-ref" href="#fn:4">4</a></sup></p>
+<h2>Variant roadmap</h2>
+<p>Variant terminology can be confusing because air-warfare blocks, ballistic-missile-defense configurations, software upgrades, and mission-expansion modifications overlap. Public sources should therefore be read as a family tree rather than as a single clean sequence.</p>
+<table>
+<thead>
+<tr>
+<th>Variant/configuration</th>
+<th>Public description</th>
+<th>Status and assessment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Block I</td>
+<td>Original fleet-area air-defense missile with active/semi-active seeker and over-the-horizon capability.</td>
+<td>IOC in 2013; foundation of the family.<sup id="fnref7:1"><a class="footnote-ref" href="#fn:1">1</a></sup></td>
+</tr>
+<tr>
+<td>Block IA</td>
+<td>Pre-planned hardware/software improvements addressing advanced threats; later mission expansion added anti-surface capability.</td>
+<td>Principal production/fielded evolution; air-defense effectiveness remained linked to prior DOT&amp;E assessments.<sup id="fnref:21"><a class="footnote-ref" href="#fn:21">21</a></sup><sup id="fnref5:11"><a class="footnote-ref" href="#fn:11">11</a></sup></td>
+</tr>
+<tr>
+<td>Dual I</td>
+<td>Sea-Based Terminal configuration for terminal defense against short-range ballistic missiles while retaining air-defense functions.</td>
+<td>Fielded BMD-related capability.<sup id="fnref:22"><a class="footnote-ref" href="#fn:22">22</a></sup></td>
+</tr>
+<tr>
+<td>Dual II / SWUP</td>
+<td>Enhanced terminal-defense configuration aimed at short- and medium-range ballistic missiles.</td>
+<td>Successful MRBM intercept in FTM-32 in March 2024; test did not establish full operational effectiveness or survivability.<sup id="fnref4:9"><a class="footnote-ref" href="#fn:9">9</a></sup><sup id="fnref5:10"><a class="footnote-ref" href="#fn:10">10</a></sup></td>
+</tr>
+<tr>
+<td>Block IAU</td>
+<td>Electronics-unit update addressing component obsolescence, with associated software evolution.</td>
+<td>Upgrade path within the Block I family; detailed configuration remains partly non-public.<sup id="fnref:23"><a class="footnote-ref" href="#fn:23">23</a></sup></td>
+</tr>
+<tr>
+<td>Block IB</td>
+<td>Redesigned configuration intended to extend engagement range using a new second-stage rocket motor and greater kinematic performance.</td>
+<td>DOT&amp;E expected fleet delivery in FY2027 in its FY2022 report, but later budget reporting described a strategic pause and reduced development scope; current schedule should be treated as uncertain.<sup id="fnref3:24"><a class="footnote-ref" href="#fn:24">24</a></sup><sup id="fnref3:25"><a class="footnote-ref" href="#fn:25">25</a></sup></td>
+</tr>
+<tr>
+<td>AIM-174B Gunslinger</td>
+<td>Air-launched SM-6 configuration for the F/A-18E/F, without the heavy surface-launch booster and with aircraft-carriage adaptations.</td>
+<td>Publicly acknowledged as operationally deployed; range remains classified.<sup id="fnref2:15"><a class="footnote-ref" href="#fn:15">15</a></sup><sup id="fnref:26"><a class="footnote-ref" href="#fn:26">26</a></sup></td>
+</tr>
+</tbody>
+</table>
+<p>The most important roadmap distinction is between <strong>upgrading the existing missile’s electronics/software</strong> and <strong>changing its kinematic architecture</strong>. Block I/IA, Dual configurations, and software upgrades primarily exploit the existing airframe through new mission logic and electronics. Block IB introduces a larger propulsion change, bringing greater integration, qualification, thermal, structural, insensitive-munitions, and test risk.<sup id="fnref:24"><a class="footnote-ref" href="#fn:24">24</a></sup><sup id="fnref:25"><a class="footnote-ref" href="#fn:25">25</a></sup></p>
+<h2>Performance logic</h2>
+<h3>Over-the-horizon air defense</h3>
+<p>The radar horizon limits a surface ship’s direct view of low-flying targets. SM-6 addresses this not by repealing line-of-sight physics but by moving detection and tracking to a better-positioned sensor—typically airborne or another networked unit—and then using the missile’s active terminal seeker to close the final segment. A 2016 Navy test used Aegis Baseline 9 and a remote airborne sensor to destroy an over-the-horizon representative target, validating the NIFC-CA kill-chain concept.<sup id="fnref3:6"><a class="footnote-ref" href="#fn:6">6</a></sup></p>
+<p>This architecture creates three operational benefits:</p>
+<ul>
+<li><strong>Earlier engagement:</strong> The defender can launch before the threat crosses the firing ship’s organic radar horizon.</li>
+<li><strong>Larger defended footprint:</strong> A sensor and shooter do not need to be co-located.</li>
+<li><strong>Higher engagement capacity:</strong> Active homing reduces dependence on terminal illumination by the ship.</li>
+</ul>
+<p>It also creates dependencies: remote-track precision, time synchronization, network availability, identity confidence, deconfliction, and seeker acquisition all have to remain within tolerance. The missile’s advertised range is operationally irrelevant if the force cannot establish and maintain a valid fire-control-quality track.</p>
+<h3>Ballistic-missile defense</h3>
+<p>SM-6 is an endo-atmospheric, terminal-phase interceptor, whereas SM-3 principally handles exo-atmospheric midcourse engagements. SM-6 therefore contributes to layered defense by providing another opportunity closer to the defended asset and by engaging targets for which a midcourse solution was unavailable or unsuccessful.<sup id="fnref:27"><a class="footnote-ref" href="#fn:27">27</a></sup><sup id="fnref3:2"><a class="footnote-ref" href="#fn:2">2</a></sup></p>
+<p>Terminal defense is inherently constrained by short timelines, high closing speeds, defended-area geometry, target maneuver, debris and discrimination challenges, and limited opportunities for shoot-assess-shoot. The 2024 FTM-32 intercept is meaningful evidence against an advanced MRBM representative target, but a successful scripted test event should not be extrapolated into assured effectiveness against every missile type, countermeasure package, raid size, or geometry.<sup id="fnref2:9"><a class="footnote-ref" href="#fn:9">9</a></sup><sup id="fnref2:10"><a class="footnote-ref" href="#fn:10">10</a></sup></p>
+<h3>Anti-surface warfare</h3>
+<p>For anti-ship use, SM-6 combines high speed, network cueing, and a terminal radar seeker. The ability to use an air-defense inventory for offensive sea control gives commanders flexibility and imposes shorter reaction times than many subsonic anti-ship weapons.<sup id="fnref2:3"><a class="footnote-ref" href="#fn:3">3</a></sup></p>
+<p>The trade-off is mission optimization. A blast-fragmentation warhead and air-defense-derived architecture may produce a different damage mechanism than a purpose-built, heavy anti-ship cruise missile. Public reporting demonstrates target impact and a 2025 Army sinking exercise, but it does not provide enough controlled evidence to compare probability of mission kill or sinking against modern, defended combatants.<sup id="fnref2:11"><a class="footnote-ref" href="#fn:11">11</a></sup></p>
+<h3>Hypersonic defense</h3>
+<p>SM-6’s near-term counter-hypersonic role is terminal, not a general glide-phase solution. MDA describes SM-6 as the only currently available interceptor for a limited defense against hypersonic threats, while the separate Glide Phase Interceptor effort is intended to attack hypersonic weapons earlier in flight.<sup id="fnref4:2"><a class="footnote-ref" href="#fn:2">2</a></sup></p>
+<p>The March 2025 FTX-40 event advanced the sensor, fire-control, and simulated-engagement chain against a maneuvering representative target. MDA explicitly described it as a building block for a future live intercept, which means claims that SM-6 has already proven universal hypersonic interception go beyond the public evidence.<sup id="fnref3:8"><a class="footnote-ref" href="#fn:8">8</a></sup></p>
+<h2>Countermeasure assessment</h2>
+<p>The following analysis remains deliberately at the architecture and mission-assurance level. It does not provide frequencies, seeker exploitation parameters, flight profiles, firing doctrine, timing windows, or procedural instructions that could be used to defeat an operational weapon.</p>
+<h3>What SM-6 counters</h3>
+<table>
+<thead>
+<tr>
+<th>Threat tactic or challenge</th>
+<th>SM-6 architectural response</th>
+<th>Residual uncertainty</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Low-altitude approach below a ship’s radar horizon</td>
+<td>Remote airborne/surface sensing, CEC composite tracking, engage-on-remote, and active terminal seeker.<sup id="fnref5:6"><a class="footnote-ref" href="#fn:6">6</a></sup><sup id="fnref6:7"><a class="footnote-ref" href="#fn:7">7</a></sup></td>
+<td>Network or remote-sensor loss can reduce the advantage; detailed low-altitude performance is classified.</td>
+</tr>
+<tr>
+<td>Multiple simultaneous air threats</td>
+<td>Aegis track management plus active-homing missiles reduce pressure on shipboard terminal illuminators.</td>
+<td>Magazine capacity, doctrine, identification, and command latency still bound raid handling.</td>
+</tr>
+<tr>
+<td>High-speed terminal ballistic target</td>
+<td>BMD-initialized guidance/software, Aegis fire control, dual-mode seeker, and blast-fragmentation intercept.<sup id="fnref5:9"><a class="footnote-ref" href="#fn:9">9</a></sup></td>
+<td>Short engagement window and target complexity; full operational-effectiveness data are not public.</td>
+</tr>
+<tr>
+<td>Maneuvering hypersonic-representative target</td>
+<td>Space/maritime tracking, latest Aegis baseline, and upgraded SM-6 simulated terminal engagement.<sup id="fnref7:8"><a class="footnote-ref" href="#fn:8">8</a></sup></td>
+<td>Live intercept and operationally representative results remain incomplete publicly.</td>
+</tr>
+<tr>
+<td>Surface combatant at extended distance</td>
+<td>Joint/remote targeting plus high-speed flight and active radar terminal homing.</td>
+<td>Target identification, moving-target track continuity, electronic warfare, and damage effectiveness remain scenario-dependent.</td>
+</tr>
+<tr>
+<td>Component obsolescence and evolving threats</td>
+<td>Electronics-unit, software, and block upgrades preserve compatibility and add mission logic.<sup id="fnref2:23"><a class="footnote-ref" href="#fn:23">23</a></sup></td>
+<td>Configuration complexity and test burden can create uneven capability across inventories.</td>
+</tr>
+</tbody>
+</table>
+<h3>Countering the SM-6 system</h3>
+<p>A credible opposing force would not treat SM-6 as an isolated missile. It would seek to reduce the reliability of the <strong>sensor-to-decision-to-weapon chain</strong> through broad countermeasure classes:</p>
+<ul>
+<li><strong>Sensor contestation:</strong> Degrading, distracting, or forcing displacement of airborne, surface, and space sensors can shorten warning time and reduce track quality.</li>
+<li><strong>Network contestation:</strong> Denial, disruption, deception, or latency in data exchange can break the separation between sensor and shooter that gives SM-6 much of its reach.</li>
+<li><strong>Electromagnetic protection and deception:</strong> Modern targets may use signature management, jamming, decoys, clutter exploitation, and emissions control to complicate detection, discrimination, and terminal seeker acquisition.</li>
+<li><strong>Complex raids:</strong> Mixed threats from different directions, altitudes, speeds, and mission types can stress classification, weapon assignment, engagement capacity, and magazine depth.</li>
+<li><strong>Kinematic stress:</strong> Maneuver, geometry, terrain or horizon masking, and compressed timelines can reduce the interceptor’s available energy and decision time.</li>
+<li><strong>Launcher and logistics pressure:</strong> Mk 41 cells are finite, and at-sea reloading is constrained. Sustained operations can force trade-offs among SM-6, SM-3, SM-2, ESSM, Tomahawk, and anti-submarine weapons.</li>
+<li><strong>Target hardening and distributed operations:</strong> Mobility, dispersion, redundancy, deception, and rapid restoration can reduce the operational effect of successful anti-surface strikes.</li>
+</ul>
+<p>These are general defensive principles, not guaranteed defeat mechanisms. Public sources do not disclose the seeker’s electronic-protection techniques, Aegis counter-countermeasure logic, data-link resilience, or classified performance envelopes. DOT&amp;E’s finding of insufficient data on contested electromagnetic and cyber survivability is therefore more informative than categorical claims on either side.<sup id="fnref3:11"><a class="footnote-ref" href="#fn:11">11</a></sup></p>
+<h3>Counter-countermeasure strengths</h3>
+<p>SM-6 and its ecosystem possess several features intended to preserve effectiveness under contest:</p>
+<ul>
+<li><strong>Sensor diversity:</strong> Aegis, CEC participants, airborne early warning, and emerging space sensors offer multiple paths to a track rather than a single radar dependency.<sup id="fnref4:7"><a class="footnote-ref" href="#fn:7">7</a></sup><sup id="fnref5:8"><a class="footnote-ref" href="#fn:8">8</a></sup></li>
+<li><strong>Dual-mode terminal guidance:</strong> Active and semi-active modes provide engagement flexibility, although detailed mode logic is classified.<sup id="fnref5:1"><a class="footnote-ref" href="#fn:1">1</a></sup></li>
+<li><strong>Composite tracking:</strong> CEC combines sensor observations into a common fire-control picture, improving continuity and geometry.<sup id="fnref5:7"><a class="footnote-ref" href="#fn:7">7</a></sup></li>
+<li><strong>Software-driven mission growth:</strong> BMD, anti-surface, and threat-response enhancements can be introduced without replacing every mechanical element.</li>
+<li><strong>Layered force defense:</strong> SM-6 is normally employed alongside SM-3, SM-2, ESSM, electronic warfare, guns, aircraft, and other systems rather than as a single defensive layer.<sup id="fnref:28"><a class="footnote-ref" href="#fn:28">28</a></sup></li>
+<li><strong>Improved radar sensitivity:</strong> SPY-6 provides increased sensitivity and discrimination and is designed to operate against air, surface, ballistic, hypersonic, jamming, and clutter challenges.<sup id="fnref2:18"><a class="footnote-ref" href="#fn:18">18</a></sup></li>
+</ul>
+<h3>Saturation and economics</h3>
+<p>Magazine depth is the most visible systemic weakness. A vertical-launch cell occupied by one SM-6 cannot simultaneously carry another mission’s weapon, and a ship that exhausts key interceptors may have to leave the operating area to reload. CRS has long identified finite magazines and unfavorable cost-exchange ratios as central limitations of shipboard missile defense.<sup id="fnref:29"><a class="footnote-ref" href="#fn:29">29</a></sup></p>
+<p>The economic picture is nuanced. Defensive missiles can cost more than the threats they intercept, but a simple missile-to-missile price comparison ignores the value of the protected ship, crew, mission, and cargo. CSIS found that U.S. defensive missiles averaged roughly twice the procurement cost of offensive missiles in FY2024 data, while also warning that cost-exchange ratios are not by themselves sufficient to judge defensive value.<sup id="fnref:30"><a class="footnote-ref" href="#fn:30">30</a></sup></p>
+<p>The practical answer is layered engagement doctrine: preserve SM-6 for targets whose range, speed, altitude, or priority justify it; use less expensive interceptors, aircraft, electronic warfare, guns, or directed-energy systems where they provide acceptable probability of defense. Red Sea operations demonstrated both the combat value of high-end interceptors and the inventory stress generated by sustained attacks.<sup id="fnref:31"><a class="footnote-ref" href="#fn:31">31</a></sup><sup id="fnref:32"><a class="footnote-ref" href="#fn:32">32</a></sup></p>
+<h2>Evidence and test record</h2>
+<table>
+<thead>
+<tr>
+<th>Event</th>
+<th>What it demonstrated</th>
+<th>What it did not establish</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NIFC-CA longest-range AAW test, 2016</td>
+<td>Aegis Baseline 9 processed remote airborne-sensor data and SM-6 destroyed an over-the-horizon representative target.<sup id="fnref6:6"><a class="footnote-ref" href="#fn:6">6</a></sup></td>
+<td>Performance under every contested-network or electronic-warfare condition.</td>
+</tr>
+<tr>
+<td>Tri-mission software tests, 2017</td>
+<td>Air warfare, sea-based terminal BMD, and anti-surface functions in the Block I software family.</td>
+<td>Universal mission effectiveness across all operational environments.</td>
+</tr>
+<tr>
+<td>FTM-31 E1a, 2023</td>
+<td>Successful MRBM terminal engagement using SM-6 Dual II SWUP in a two-interceptor salvo.<sup id="fnref:33"><a class="footnote-ref" href="#fn:33">33</a></sup></td>
+<td>Public single-shot probability of kill or broad raid performance.</td>
+</tr>
+<tr>
+<td>FTM-32, 2024</td>
+<td>Detection, tracking, engagement, and live intercept of an advanced MRBM target by an Aegis Baseline 9 ship.<sup id="fnref6:9"><a class="footnote-ref" href="#fn:9">9</a></sup></td>
+<td>DOT&amp;E-level operational effectiveness, lethality, suitability, or survivability.<sup id="fnref6:10"><a class="footnote-ref" href="#fn:10">10</a></sup></td>
+</tr>
+<tr>
+<td>Valiant Shield architecture demonstration, 2024</td>
+<td>Feasibility of linking LTAMDS tracks, IBCS, and SM-6 engagement-control software.<sup id="fnref3:4"><a class="footnote-ref" href="#fn:4">4</a></sup></td>
+<td>A fielded Army SM-6 air-defense battery or completed operational evaluation.</td>
+</tr>
+<tr>
+<td>FTX-40, 2025</td>
+<td>Detection, tracking, space-sensor data contribution, and simulated SM-6 engagement against a maneuvering hypersonic-representative target.<sup id="fnref8:8"><a class="footnote-ref" href="#fn:8">8</a></sup></td>
+<td>A live hypersonic intercept.</td>
+</tr>
+<tr>
+<td>Talisman Sabre, 2025</td>
+<td>Ground-launched SM-6 from Army MRC successfully struck and sank a maritime target.</td>
+<td>Effectiveness against a fully defended, maneuvering peer warship in combat.</td>
+</tr>
+</tbody>
+</table>
+<p>The pattern is clear: SM-6 has a substantial demonstration history across missions, but test objectives differ. Developmental demonstrations, tactical experiments, live-fire intercepts, and formal operational tests answer different questions. Claims should always be matched to the type of event and the conditions represented.</p>
+<h2>Deployment and industrial base</h2>
+<p>SM-6 is deployed from Aegis surface combatants, has been adapted for Army Typhon launchers, and now underpins the AIM-174B air-launched configuration. Japan received U.S. State Department approval in January 2025 for a possible $900 million Foreign Military Sale of SM-6 Block I missiles and related equipment, demonstrating allied demand and the weapon’s role in coalition integrated air and missile defense.<sup id="fnref:34"><a class="footnote-ref" href="#fn:34">34</a></sup></p>
+<p>RTX reported in February 2026 that a new multi-year framework for SM-6 could run five years plus two option years, with a total potential value of $24.4 billion and an annual production objective above 500 missiles. Framework ceilings and production objectives are not equivalent to funded procurement quantities; annual appropriations, supplier qualification, motors, electronics, canisters, test capacity, and government acceptance will determine actual output.<sup id="fnref:35"><a class="footnote-ref" href="#fn:35">35</a></sup><sup id="fnref:36"><a class="footnote-ref" href="#fn:36">36</a></sup></p>
+<p>The 2023 acquisition report estimated a program quantity of 2,478 all-up rounds and a then-current average procurement unit cost of about $2.97 million in constant 2004 dollars; these program averages are not the same as the current marginal price of a production missile. FY2025 budget material funded 125 Block IA missiles and canisters, while contemporary budget analysis placed the then-year procurement cost near $4.3 million per round. Configuration, lot size, government-furnished equipment, canisters, support, and accounting method explain why public “unit cost” figures vary.<sup id="fnref:37"><a class="footnote-ref" href="#fn:37">37</a></sup><sup id="fnref:38"><a class="footnote-ref" href="#fn:38">38</a></sup><sup id="fnref2:31"><a class="footnote-ref" href="#fn:31">31</a></sup></p>
+<h2>Comparative position</h2>
+<table>
+<thead>
+<tr>
+<th>Weapon</th>
+<th>Primary role</th>
+<th>Guidance/kill approach</th>
+<th>Where it complements SM-6</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SM-2</td>
+<td>Medium/long-range fleet air defense, depending on variant</td>
+<td>Primarily ship-supported radar guidance, with newer variants adding active capabilities</td>
+<td>Lower-cost or different-envelope air-defense layer; preserves SM-6 inventory for the hardest or longest-range engagements.</td>
+</tr>
+<tr>
+<td>ESSM Block II</td>
+<td>Local/area defense against air-breathing threats</td>
+<td>Active/semi-active radar guidance; multiple rounds can be accommodated per Mk 41 cell in compatible configurations</td>
+<td>Greater magazine density for cruise missiles and aircraft at shorter ranges.</td>
+</tr>
+<tr>
+<td>SM-3</td>
+<td>Exo-atmospheric ballistic-missile defense</td>
+<td>Kinetic hit-to-kill vehicle</td>
+<td>Midcourse layer above SM-6’s terminal BMD role.<sup id="fnref6:2"><a class="footnote-ref" href="#fn:2">2</a></sup><sup id="fnref2:27"><a class="footnote-ref" href="#fn:27">27</a></sup></td>
+</tr>
+<tr>
+<td>Patriot PAC-3 family</td>
+<td>Land-based point/area defense against ballistic and air threats</td>
+<td>Hit-to-kill interceptor integrated with Patriot/IBCS architectures</td>
+<td>Land-based lower-tier defense; SM-6 offers longer-range joint options where launcher and C2 integration exist.</td>
+</tr>
+<tr>
+<td>Tomahawk</td>
+<td>Long-range land attack and maritime strike</td>
+<td>Cruise-missile flight with mission navigation and terminal options by variant</td>
+<td>Typhon pairs Tomahawk’s long-range strike with SM-6’s faster air/surface engagement portfolio.<sup id="fnref3:5"><a class="footnote-ref" href="#fn:5">5</a></sup></td>
+</tr>
+<tr>
+<td>AIM-174B</td>
+<td>Long-range carrier-based air-to-air</td>
+<td>SM-6-derived active radar seeker, air launch</td>
+<td>Extends the family into aviation and lets the launch aircraft contribute kinematic energy and forward positioning.<sup id="fnref3:15"><a class="footnote-ref" href="#fn:15">15</a></sup></td>
+</tr>
+</tbody>
+</table>
+<p>SM-6’s comparative advantage is not that it is optimal for every mission. It is that a single family can perform several high-priority missions and plug into multiple launch and command architectures. The corresponding disadvantages are cost, single-round VLS cell consumption, configuration complexity, and the danger of using a premium interceptor where a lower-tier effector would suffice.</p>
+<h2>Risks and unknowns</h2>
+<h3>Operational-test gap</h3>
+<p>The largest analytical risk is conflating successful demonstrations with formal operational effectiveness. DOT&amp;E reported that the Navy did not conduct SM-6 operational testing or submit operational-test plans for approval in FY2024, and that Block IB effectiveness, lethality, suitability, and survivability would be assessed only after operational and live-fire testing.<sup id="fnref3:10"><a class="footnote-ref" href="#fn:10">10</a></sup></p>
+<h3>Electromagnetic and cyber survivability</h3>
+<p>The system’s most valuable feature—networked remote engagement—also expands its attack surface. Public test data are insufficient to quantify resilience against sophisticated electronic attack, cyber effects, deceptive tracks, data corruption, or combined network and sensor degradation. The right conclusion is uncertainty, not presumed failure: classified test evidence may exist, but it cannot support a public assessment.<sup id="fnref4:11"><a class="footnote-ref" href="#fn:11">11</a></sup></p>
+<h3>Block IB schedule and design</h3>
+<p>Block IB’s larger motor promises greater range and speed but introduces qualification and integration risk. DOT&amp;E previously expected fleet delivery in FY2027, while later FY2026 budget reporting described a strategic pause, funding reduction, and focus on motor development and qualification. As of October 2026, the prudent assessment is that Block IB remains developmental and that public schedule claims are less reliable than the mature Block IA production outlook.<sup id="fnref2:25"><a class="footnote-ref" href="#fn:25">25</a></sup><sup id="fnref2:24"><a class="footnote-ref" href="#fn:24">24</a></sup></p>
+<h3>Inventory allocation</h3>
+<p>Multi-mission flexibility creates a portfolio-management problem. Every SM-6 expended on a lower-end target is unavailable for terminal BMD, long-range air defense, or maritime strike. Red Sea combat reportedly drove heavy use of Standard-family weapons and renewed attention to production and stockpile depth.<sup id="fnref2:32"><a class="footnote-ref" href="#fn:32">32</a></sup><sup id="fnref3:31"><a class="footnote-ref" href="#fn:31">31</a></sup></p>
+<h3>Kill-chain dependence</h3>
+<p>At maximum practical reach, SM-6 depends increasingly on offboard sensing and communications. An intact missile round does not equal an intact engagement capability if track custody, identification, authorization, or network connectivity fails. Conversely, resilient distributed sensing can allow the weapon to exploit ranges and geometries unavailable to an organic-sensor-only shooter.</p>
+<h2>Enterprise-architecture view</h2>
+<p>From an enterprise-architecture perspective, SM-6 is a reusable effector service within several mission threads rather than a vertically isolated weapon:</p>
+<table>
+<thead>
+<tr>
+<th>Architecture layer</th>
+<th>Naval implementation</th>
+<th>Joint/land evolution</th>
+<th>Key assurance concern</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sense</td>
+<td>SPY-1/SPY-6, E-2D, other CEC participants, space sensors</td>
+<td>LTAMDS and joint sensors</td>
+<td>Detection, discrimination, track continuity, sensor diversity</td>
+</tr>
+<tr>
+<td>Share</td>
+<td>CEC and approved tactical networks</td>
+<td>IBCS and federated joint C2</td>
+<td>Latency, data quality, trust, cyber and electromagnetic resilience</td>
+</tr>
+<tr>
+<td>Decide</td>
+<td>Aegis weapon control and command doctrine</td>
+<td>Battery operations center, IBCS, joint fires C2</td>
+<td>Identity, authorization, deconfliction, weapon-target pairing</td>
+</tr>
+<tr>
+<td>Act</td>
+<td>Mk 41 VLS plus SM-6</td>
+<td>Typhon/Mk 70-derived launcher; AIM-174B from F/A-18E/F</td>
+<td>Launcher availability, inventory, configuration control, engagement geometry</td>
+</tr>
+<tr>
+<td>Assess</td>
+<td>Ship, airborne, and joint sensors</td>
+<td>Joint battle-damage and kill assessment</td>
+<td>Timeliness, confidence, re-engagement decision</td>
+</tr>
+<tr>
+<td>Sustain</td>
+<td>Navy magazines, depots, canisters, Raytheon production</td>
+<td>Cross-service missile and launcher support</td>
+<td>Production rate, motor/electronics capacity, transport, reload, software baseline alignment</td>
+</tr>
+</tbody>
+</table>
+<p>This framing explains why the weapon has strategic leverage beyond its published physical specifications. Common missile technology can be inserted into ship, land, air, and potentially broader joint architectures, but only if interface standards, track quality, software baselines, certification, training, and authorities remain synchronized.</p>
+<h2>Bottom line</h2>
+<p>SM-6 is one of the most versatile operational missile families in the U.S. inventory. Its decisive innovation is not merely an AMRAAM-derived active seeker on a Standard Missile airframe; it is the pairing of that seeker with Aegis, CEC, remote sensors, and expanding joint launch options. That architecture enables over-the-horizon defense, terminal ballistic-missile interception, maritime strike, and derivative air-launched missions from a shared technology base.<sup id="fnref4:6"><a class="footnote-ref" href="#fn:6">6</a></sup><sup id="fnref4:1"><a class="footnote-ref" href="#fn:1">1</a></sup></p>
+<p>Its limits are equally architectural. Magazine depth, production capacity, offboard-track dependence, contested-spectrum survivability, target discrimination, and incomplete public operational testing shape real effectiveness. Hypersonic-defense claims should remain bounded to limited terminal defense and ongoing development until live, operationally representative evidence supports more.<sup id="fnref5:2"><a class="footnote-ref" href="#fn:2">2</a></sup><sup id="fnref4:8"><a class="footnote-ref" href="#fn:8">8</a></sup><sup id="fnref4:10"><a class="footnote-ref" href="#fn:10">10</a></sup></p>
+<p>For decision-makers, the most accurate description is: <strong>SM-6 is a high-value, multi-domain effector whose performance scales with the resilience and quality of the kill web around it.</strong> Investment in sensors, CEC and joint-network resilience, lower-cost complementary effectors, reload concepts, production capacity, and rigorous operational testing may yield as much practical combat value as incremental missile-range improvement alone.</p>
+<hr />
+<h2>References</h2>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p><a href="https://www.navy.mil/Resources/Fact-Files/Display-FactFiles/Article/2169011/standard-missile/">Standard Missile &gt; United States Navy &gt; Display-FactFiles</a> - Standard Missile 2 (SM-2) is the U.S Navy's primary surface-to-air air defense weapon. It is an inte...&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref6:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref7:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p><a href="https://www.congress.gov/crs-product/RL33745">Navy Aegis Ballistic Missile Defense (BMD) Program</a> - The SM-6 is a dual-capability missile that can be used for either air defense (i.e., countering airc...&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref6:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p><a href="https://www.rtx.com/raytheon/what-we-do/sea/sm-6-missile">SM-6® Missile | Raytheon</a> - The SM-6® missile is three missiles in one. It's the only combat-proven weapon that can perform anti...&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:3" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:4">
+<p><a href="https://www.rtx.com/news/news-center/2024/07/18/rtxs-raytheon-demonstrates-sm-6-integration-with-ltamds-and-ibcs">RTX's Raytheon demonstrates SM-6 integration with ...</a> - "LTAMDS matched with SM-6 adds an exceptional capability to defeat increasingly diverse and complex ...&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:4" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:5">
+<p><a href="https://www.usarpac.army.mil/Our-Story/Our-News/Article-Display/Article/3740807/us-armys-mid-range-capability-makes-its-first-deployment-in-the-philippines-for/">US Army's Mid-Range Capability makes its first deployment in the ...</a> - In a historic first, the 1st Multi-Domain Task Force successfully deployed the Mid-Range Capability ...&#160;<a class="footnote-backref" href="#fnref:5" title="Jump back to footnote 5 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:5" title="Jump back to footnote 5 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:5" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:6">
+<p><a href="https://www.navsea.navy.mil/Media/News/Article-View/Article/959422/navy-conducts-longest-range-aaw-intercept-from-uss-princeton/">Navy Conducts Longest Range AAW Intercept from USS ...</a> - WASHINGTON - The Navy successfully completed the longest range Anti-Air Warfare intercept in Navy hi...&#160;<a class="footnote-backref" href="#fnref:6" title="Jump back to footnote 6 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:6" title="Jump back to footnote 6 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:6" title="Jump back to footnote 6 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:6" title="Jump back to footnote 6 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:6" title="Jump back to footnote 6 in the text">&#8617;</a><a class="footnote-backref" href="#fnref6:6" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+<li id="fn:7">
+<p><a href="https://www.navsea.navy.mil/Media/News/Article-View/Article/4281878/cooperative-engagement-capability-enhancing-battlefield-awareness/">Cooperative Engagement Capability: Enhancing battlefield ...</a> - As modern threats to naval forces evolve, it is critical that our responses do as well. Adversaries ...&#160;<a class="footnote-backref" href="#fnref:7" title="Jump back to footnote 7 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:7" title="Jump back to footnote 7 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:7" title="Jump back to footnote 7 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:7" title="Jump back to footnote 7 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:7" title="Jump back to footnote 7 in the text">&#8617;</a><a class="footnote-backref" href="#fnref6:7" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+</li>
+<li id="fn:8">
+<p><a href="https://www.mda.mil/news/25news0002.html">MDA - MDA News Releases</a>&#160;<a class="footnote-backref" href="#fnref:8" title="Jump back to footnote 8 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:8" title="Jump back to footnote 8 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:8" title="Jump back to footnote 8 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:8" title="Jump back to footnote 8 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:8" title="Jump back to footnote 8 in the text">&#8617;</a><a class="footnote-backref" href="#fnref6:8" title="Jump back to footnote 8 in the text">&#8617;</a><a class="footnote-backref" href="#fnref7:8" title="Jump back to footnote 8 in the text">&#8617;</a><a class="footnote-backref" href="#fnref8:8" title="Jump back to footnote 8 in the text">&#8617;</a></p>
+</li>
+<li id="fn:9">
+<p><a href="https://www.mda.mil/news/24news0004.html">MDA, Navy Conducts Successful Intercept with SM-6; Advances collaboration with Australia</a>&#160;<a class="footnote-backref" href="#fnref:9" title="Jump back to footnote 9 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:9" title="Jump back to footnote 9 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:9" title="Jump back to footnote 9 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:9" title="Jump back to footnote 9 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:9" title="Jump back to footnote 9 in the text">&#8617;</a><a class="footnote-backref" href="#fnref6:9" title="Jump back to footnote 9 in the text">&#8617;</a></p>
+</li>
+<li id="fn:10">
+<p><a href="https://www.dote.osd.mil/Portals/97/pub/reports/FY2024/navy/2024sm-6.pdf">DOT&amp;E FY2024 Annual Report - Navy - SM-6</a>&#160;<a class="footnote-backref" href="#fnref:10" title="Jump back to footnote 10 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:10" title="Jump back to footnote 10 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:10" title="Jump back to footnote 10 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:10" title="Jump back to footnote 10 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:10" title="Jump back to footnote 10 in the text">&#8617;</a><a class="footnote-backref" href="#fnref6:10" title="Jump back to footnote 10 in the text">&#8617;</a></p>
+</li>
+<li id="fn:11">
+<p><a href="https://www.dote.osd.mil/Portals/97/pub/reports/FY2022/navy/2022sm-6.pdf">Standard Missile-6 (SM-6) Family of Missiles</a>&#160;<a class="footnote-backref" href="#fnref:11" title="Jump back to footnote 11 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:11" title="Jump back to footnote 11 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:11" title="Jump back to footnote 11 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:11" title="Jump back to footnote 11 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:11" title="Jump back to footnote 11 in the text">&#8617;</a></p>
+</li>
+<li id="fn:12">
+<p><a href="https://www.congress.gov/crs-product/IF11353">Defense Primer: U.S. Precision-Guided Munitions</a> - The SM-6, or RIM-174 Extended Range Active Missile (ERAM), is a multi-mission missile produced by Ra...&#160;<a class="footnote-backref" href="#fnref:12" title="Jump back to footnote 12 in the text">&#8617;</a></p>
+</li>
+<li id="fn:13">
+<p><a href="https://www.congress.gov/crs_external_products/R/PDF/R45996/R45996.8.pdf">Precision-Guided Munitions: Background and Issues for ...</a>&#160;<a class="footnote-backref" href="#fnref:13" title="Jump back to footnote 13 in the text">&#8617;</a></p>
+</li>
+<li id="fn:14">
+<p><a href="https://www.congress.gov/crs-products/product/pdf/RL/RL33745/235">Navy Aegis Ballistic Missile Defense (BMD) Program ...</a>&#160;<a class="footnote-backref" href="#fnref:14" title="Jump back to footnote 14 in the text">&#8617;</a></p>
+</li>
+<li id="fn:15">
+<p><a href="https://www.navy.mil/Resources/Fact-Files/Display-FactFiles/Article/4580875/aim-174b-gunslinger-sm-6-air-launched-configuration/">AIM-174B Gunslinger (SM-6 Air Launched Configuration) - Navy.mil</a> - AIM-174B Gunslinger (SM-6 Air Launched Configuration)&#160;<a class="footnote-backref" href="#fnref:15" title="Jump back to footnote 15 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:15" title="Jump back to footnote 15 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:15" title="Jump back to footnote 15 in the text">&#8617;</a></p>
+</li>
+<li id="fn:16">
+<p><a href="https://www.airpac.navy.mil/Portals/53/Naval%20Aviation%20Playbook%202025.pdf">NAVAL AVIATION 2025</a> - AIM-174B is a long-range, air-to-air missile also known as the SM-6. • This missile allows F/A-18E/F...&#160;<a class="footnote-backref" href="#fnref:16" title="Jump back to footnote 16 in the text">&#8617;</a></p>
+</li>
+<li id="fn:17">
+<p><a href="https://missilethreat.csis.org/defsys/sm-6/">Standard Missile-6 (SM-6)</a> - The Standard Missile-6 (SM-6) is a multi-mission missile capable of antiair warfare, terminal ballis...&#160;<a class="footnote-backref" href="#fnref:17" title="Jump back to footnote 17 in the text">&#8617;</a></p>
+</li>
+<li id="fn:18">
+<p><a href="https://www.rtx.com/raytheon/what-we-do/sea/spy6-radars">U.S. Navy's SPY-6 Family of Radars | Raytheon - RTX</a> - SPY-6 is the U.S Navy family of radars that perform air and missile defense on seven classes of ship...&#160;<a class="footnote-backref" href="#fnref:18" title="Jump back to footnote 18 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:18" title="Jump back to footnote 18 in the text">&#8617;</a></p>
+</li>
+<li id="fn:19">
+<p><a href="https://www.rtx.com/news/news-center/2024/09/17/rtxs-raytheon-selected-to-streamline-production-of-spy-6-transmit-receive-module">News | RTX's Raytheon selected to streamline production of SPY-6 ...</a> - Manufacturing advancements expected to reduce production costsANDOVER, Mass., Sept. 17, 2024 /PRNews...&#160;<a class="footnote-backref" href="#fnref:19" title="Jump back to footnote 19 in the text">&#8617;</a></p>
+</li>
+<li id="fn:20">
+<p><a href="https://www.navsea.navy.mil/Home/Warfare-Centers/NSWC-Port-Hueneme/What-We-Do/Aegis-Combat-System/">Naval Sea Systems Command &gt; Home &gt; Warfare Centers ...</a> - Official website of the Naval Sea Systems Command (NAVSEA), the largest of the U.S. Navy's five syst...&#160;<a class="footnote-backref" href="#fnref:20" title="Jump back to footnote 20 in the text">&#8617;</a></p>
+</li>
+<li id="fn:21">
+<p><a href="https://www.dote.osd.mil/Portals/97/pub/reports/FY2016/navy/2016sm-6.pdf?ver=2019-08-22-105305-727">FY16 NAVY PROGRAMS - Standard Missile-6 (SM-6)</a>&#160;<a class="footnote-backref" href="#fnref:21" title="Jump back to footnote 21 in the text">&#8617;</a></p>
+</li>
+<li id="fn:22">
+<p><a href="https://www.dote.osd.mil/Portals/97/pub/reports/FY2018/bmds/2018aegisbmd.pdf?ver=2019-08-21-155741-0">Microsoft Word - Section Dividers.doc</a>&#160;<a class="footnote-backref" href="#fnref:22" title="Jump back to footnote 22 in the text">&#8617;</a></p>
+</li>
+<li id="fn:23">
+<p><a href="https://www.twz.com/air/sm-6-missile-closer-to-proving-hypersonic-weapon-intercept-capability-after-aegis-destroyer-test">SM-6 Missile Closer To Proving Hypersonic Weapon ...</a> - SM-6 Dual I and Dual II are ballistic missile defense-optimized configurations of existing Block I-s...&#160;<a class="footnote-backref" href="#fnref:23" title="Jump back to footnote 23 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:23" title="Jump back to footnote 23 in the text">&#8617;</a></p>
+</li>
+<li id="fn:24">
+<p><a href="https://www.dote.osd.mil/Portals/97/pub/reports/FY2022/navy/2022sm-6.pdf?ver=JtGbsvvWg8elnI6fT6_n3g==">Standard Missile-6 (SM-6) Family of ...</a> - SM-6 consists of three primary variants: Block I, Block IA, and. Block IB. Block I and Block IA were...&#160;<a class="footnote-backref" href="#fnref:24" title="Jump back to footnote 24 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:24" title="Jump back to footnote 24 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:24" title="Jump back to footnote 24 in the text">&#8617;</a></p>
+</li>
+<li id="fn:25">
+<p><a href="https://www.navalnews.com/naval-news/2025/07/another-u-s-navy-hypersonic-program-halted-in-strategic-pause/">Another U.S. Navy Hypersonic Program Halted in 'Strategic Pause'</a> - The SM-6 Block IB, one of the U.S. Navy's future time sensitive strike weapons soon to be fielded, h...&#160;<a class="footnote-backref" href="#fnref:25" title="Jump back to footnote 25 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:25" title="Jump back to footnote 25 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:25" title="Jump back to footnote 25 in the text">&#8617;</a></p>
+</li>
+<li id="fn:26">
+<p><a href="https://www.navy.mil/Portals/1/CNO/NAVPLAN2024/Files/Delivering-Warfighting-Advantage.pdf">SUBSURFACE:</a>&#160;<a class="footnote-backref" href="#fnref:26" title="Jump back to footnote 26 in the text">&#8617;</a></p>
+</li>
+<li id="fn:27">
+<p><a href="https://www.mda.mil/system/aegis_bmd.html">MDA - Aegis Ballistic Missile Defense</a>&#160;<a class="footnote-backref" href="#fnref:27" title="Jump back to footnote 27 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:27" title="Jump back to footnote 27 in the text">&#8617;</a></p>
+</li>
+<li id="fn:28">
+<p><a href="https://www.congress.gov/118/meeting/house/116678/witnesses/HHRG-118-AS29-Wstate-HillJ-20231207.pdf">[PDF] Written Statement of Mr. John Hill Deputy Assistant Secretary of ...</a>&#160;<a class="footnote-backref" href="#fnref:28" title="Jump back to footnote 28 in the text">&#8617;</a></p>
+</li>
+<li id="fn:29">
+<p><a href="https://www.everycrsreport.com/files/20170605_R44175_cb1c9478bbfc444ea448c84473b3d76987deece0.pdf">[PDF] Navy Lasers, Railgun, and Hypervelocity Projectile</a>&#160;<a class="footnote-backref" href="#fnref:29" title="Jump back to footnote 29 in the text">&#8617;</a></p>
+</li>
+<li id="fn:30">
+<p><a href="https://www.csis.org/analysis/cost-and-value-air-and-missile-defense-intercepts">Cost and Value in Air and Missile Defense Intercepts</a> - The “cost exchange ratio” framework is attractive because it is rooted in some truth: air and missil...&#160;<a class="footnote-backref" href="#fnref:30" title="Jump back to footnote 30 in the text">&#8617;</a></p>
+</li>
+<li id="fn:31">
+<p><a href="https://www.twz.com/news-features/replenishing-missiles-used-to-down-houthi-threats-will-require-extra-funding">Replenishing Missiles Used To Down Houthi Threats Will ...</a> - The Navy's need to restock missiles it has fired to protect ships in and around the Red Sea undersco...&#160;<a class="footnote-backref" href="#fnref:31" title="Jump back to footnote 31 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:31" title="Jump back to footnote 31 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:31" title="Jump back to footnote 31 in the text">&#8617;</a></p>
+</li>
+<li id="fn:32">
+<p><a href="https://taskandpurpose.com/news/navy-missiles-red-sea/">In 15 months, the Navy fired more air defense missiles than it did in the last 30 years</a> - The Navy has burned through costly missiles, some with a price tag of $28.7 million. So, it has turn...&#160;<a class="footnote-backref" href="#fnref:32" title="Jump back to footnote 32 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:32" title="Jump back to footnote 32 in the text">&#8617;</a></p>
+</li>
+<li id="fn:33">
+<p><a href="https://www.mda.mil/news/gallery_aegis.html">MDA - MDA News</a> - The Missile Defense Agency has fielded an initial capability to protect the U.S and our allies again...&#160;<a class="footnote-backref" href="#fnref:33" title="Jump back to footnote 33 in the text">&#8617;</a></p>
+</li>
+<li id="fn:34">
+<p><a href="https://www.dsca.mil/Press-Media/Major-Arms-Sales/Tag/297112/standard-missile-6-sm-6-block-i-missiles">Major Arms Sales</a> - The State Department has made a determination approving a possible Foreign Military Sale to the Gove...&#160;<a class="footnote-backref" href="#fnref:34" title="Jump back to footnote 34 in the text">&#8617;</a></p>
+</li>
+<li id="fn:35">
+<p><a href="https://www.rtx.com/news/2026/02/04/munitions-agreements">Fast track: Critical munitions</a> - The SM-6 contract has a term of five years, with two additional option years, and a total value of $...&#160;<a class="footnote-backref" href="#fnref:35" title="Jump back to footnote 35 in the text">&#8617;</a></p>
+</li>
+<li id="fn:36">
+<p><a href="https://www.rtx.com/news/news-center/2026/02/04/rtxs-raytheon-partners-with-department-of-war-on-five-landmark-agreements-to-exp">RTX's Raytheon partners with Department of War on five ...</a> - Standard Missile-6 is the only missile that supports anti-air warfare, anti-surface warfare and sea-...&#160;<a class="footnote-backref" href="#fnref:36" title="Jump back to footnote 36 in the text">&#8617;</a></p>
+</li>
+<li id="fn:37">
+<p><a href="https://www.esd.whs.mil/Portals/54/Documents/FOID/Reading%20Room/Selected_Acquisition_Reports/FY_2023_SARS/SM-6_MSAR_Dec_2023.pdf">[PDF] Modernized Selected Acquisition Report (MSAR) Standard Missile-6 ...</a>&#160;<a class="footnote-backref" href="#fnref:37" title="Jump back to footnote 37 in the text">&#8617;</a></p>
+</li>
+<li id="fn:38">
+<p><a href="https://comptroller.war.gov/Portals/45/Documents/defbudget/FY2025/FY2025_Weapons.pdf">FY 2025 Program Acquisition Costs by Weapon System</a> - FY 2025 Program: Funds the procurement of 125 SM-6 IA missiles and canisters under the second year o...&#160;<a class="footnote-backref" href="#fnref:38" title="Jump back to footnote 38 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div></article>
+  <footer class="docfoot">
+    Rendered from <code>Learning\Weapons\SM-6\SM-6 - Capabilities, Architecture, and Countermeasure Assessment.md</code>. The Obsidian vault is the source of truth. Open sources only; study material. Citations <span class="cite">S#</span> link to the pack's source ledger.
+    <div class="prevnext"><span></span><a href="weapons-hub.html">Next &rarr;</a></div>
+  </footer>
+</main>
+<script type="module">
+import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
+const dark=(document.documentElement.getAttribute("data-theme")||"").endsWith("dark");
+mermaid.initialize({startOnLoad:true,theme:dark?"dark":"default",securityLevel:"strict"});
+</script>
+</body>
+</html>

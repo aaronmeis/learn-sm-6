@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weapons learning hub | Learn SM-6</title>
+<meta name="description" content="Entry point for open-source study of weapon systems, one folder per system, starting with Raytheon SM-6.">
+<link rel="icon" href="../assets/icons/icon-192.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="library.css">
+<script>try{var p=JSON.parse(localStorage.getItem("appPalette"))||"github",m=JSON.parse(localStorage.getItem("appMode"))||"dark";document.documentElement.setAttribute("data-theme",p+"-"+m);}catch(e){document.documentElement.setAttribute("data-theme","github-dark");}</script>
+</head>
+<body>
+<header class="topbar">
+  <a href="../index.html" class="home">&larr; Learn SM-6 console</a>
+  <span class="crumb">Library · Spine</span>
+  <a href="index.html" class="home">All pages</a>
+</header>
+<main class="doc">
+  <div class="kicker">Spine</div>
+  <h1 class="doctitle">Weapons learning hub</h1>
+  <p class="lead">Entry point for open-source study of weapon systems, one folder per system, starting with Raytheon SM-6.</p>
+  
+  <article>
+<h2>Business Explanation</h2>
+<div class="callout info" markdown="0"><div class="callout-title">Business Explanation</div><p>This section collects open-source study of weapon systems, one system at a time, so the learner can talk about them accurately with defense program people and spot overclaims in briefs, vendor material, and press. Each system gets one assessment page and, when it earns a study day, a one-day mastery pack. The first system is the Raytheon SM-6 missile family.</p></div>
+
+<h2>TL;DR</h2>
+<p>One folder per system under <code>Learning/Weapons/&lt;System&gt;/</code>. The system's assessment page is the spine and feeds a <code>/one-day-mastery</code> pack as its Mode A mind map. SM-6 is first: <a href="spine.html">assessment page</a> → <a href="hub.html">one-day pack</a>. Grade every claim with the <a href="decision-card.html">evidence ladder</a>.</p>
+<h2>Scope and guardrails</h2>
+<ul>
+<li><strong>Sources:</strong> open and unclassified only. Prefer program offices (Navy, Army, MDA), DOT&amp;E, CRS, GAO, and CSIS. Label vendor material as vendor.</li>
+<li><strong>In scope:</strong> missions, architecture and kill chain, variants, test evidence, acquisition, production, and cost.</li>
+<li><strong>Out of scope:</strong> classified parameters, targeting, employment procedures, and techniques for defeating a fielded system. Countermeasures stay at the level of broad classes, as on the SM-6 page.</li>
+<li><strong>Numbers:</strong> a range or performance figure without an official source is an estimate. Say so or leave it out. Give every cost its basis and year.</li>
+</ul>
+<h2>Quick links</h2>
+<table>
+<thead>
+<tr>
+<th>Area</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SM-6 assessment (spine)</td>
+<td><a href="spine.html">SM-6 - Capabilities, Architecture, and Countermeasure Assessment</a></td>
+</tr>
+<tr>
+<td>SM-6 one-day pack</td>
+<td><a href="hub.html">Raytheon SM-6 — One-Day Mastery</a></td>
+</tr>
+<tr>
+<td>SM-6 day plan</td>
+<td><a href="day-plan.html">Day plan</a></td>
+</tr>
+<tr>
+<td>Evidence ladder card</td>
+<td><a href="decision-card.html">Decision card</a></td>
+</tr>
+<tr>
+<td>One-day mastery index</td>
+<td><em>One-Day Mastery Index</em></td>
+</tr>
+</tbody>
+</table>
+<h2>Systems catalog</h2>
+<table>
+<thead>
+<tr>
+<th>System</th>
+<th>Maker</th>
+<th>Domain</th>
+<th>Spine page</th>
+<th>One-day pack</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SM-6 (RIM-174 ERAM)</td>
+<td>Raytheon (RTX)</td>
+<td>Naval and joint air and missile defense, maritime strike</td>
+<td><a href="spine.html">SM-6 assessment</a></td>
+<td><a href="hub.html">odm-sm-6</a></td>
+<td>Pack built 2026-10-05. NotebookLM W8 not yet run.</td>
+</tr>
+</tbody>
+</table>
+<h2>Adding a system</h2>
+<ol>
+<li>Create <code>Learning/Weapons/&lt;System&gt;/</code> and file the assessment page there with frontmatter (<code>type: brief</code>, <code>topic: weapons</code>), a <strong>Location</strong> line, and a Business Explanation callout.</li>
+<li>Run <code>/one-day-mastery</code> in Mode A with that page as the mind map.</li>
+<li>Add a row to the catalog above.</li>
+</ol>
+<p>Candidates named in the SM-6 page's comparison table: SM-3, SM-2, ESSM Block II, Patriot PAC-3, Tomahawk, and the Glide Phase Interceptor. These are options, not commitments.</p>
+<h2>Related vault notes</h2>
+<ul>
+<li><em>RTX YouTube Research Pack</em> — RTX channel intake (SPY-6, Standard Missile, industrial base)</li>
+<li><em>Golden Dome interceptors brief</em> — contracts and capability view of interceptors</li>
+</ul></article>
+  <footer class="docfoot">
+    Rendered from <code>Learning\Weapons\00 - Weapons Learning Hub.md</code>. The Obsidian vault is the source of truth. Open sources only; study material. Citations <span class="cite">S#</span> link to the pack's source ledger.
+    <div class="prevnext"><a href="spine.html">&larr; Previous</a><span></span></div>
+  </footer>
+</main>
+<script type="module">
+import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
+const dark=(document.documentElement.getAttribute("data-theme")||"").endsWith("dark");
+mermaid.initialize({startOnLoad:true,theme:dark?"dark":"default",securityLevel:"strict"});
+</script>
+</body>
+</html>

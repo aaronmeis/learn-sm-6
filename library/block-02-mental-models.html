@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Block 2: Mental models | Learn SM-6</title>
+<meta name="description" content="">
+<link rel="icon" href="../assets/icons/icon-192.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="library.css">
+<script>try{var p=JSON.parse(localStorage.getItem("appPalette"))||"github",m=JSON.parse(localStorage.getItem("appMode"))||"dark";document.documentElement.setAttribute("data-theme",p+"-"+m);}catch(e){document.documentElement.setAttribute("data-theme","github-dark");}</script>
+</head>
+<body>
+<header class="topbar">
+  <a href="../index.html" class="home">&larr; Learn SM-6 console</a>
+  <span class="crumb">Library · Day blocks</span>
+  <a href="index.html" class="home">All pages</a>
+</header>
+<main class="doc">
+  <div class="kicker">Day blocks</div>
+  <h1 class="doctitle">Block 2: Mental models</h1>
+  
+  
+  <article>
+<p><strong>Time:</strong> 45 minutes
+<strong>Goal:</strong> How experts chunk the domain
+<strong>Pack:</strong> Raytheon SM-6 (<code>sm-6</code>)</p>
+<h2>Focus from mind map</h2>
+<p>Five models carry the whole day. Each one answers a different question.</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Model</th>
+<th>Question it answers</th>
+<th>Failure mode</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M1</td>
+<td><strong>Kill web, not missile.</strong> Capability is the weakest link of Sense, Share, Decide, Act, Assess.</td>
+<td>How far can SM-6 reach, and what breaks it?</td>
+<td>Crediting the missile for reach the network provides. Forgetting that network loss shrinks the reach.</td>
+</tr>
+<tr>
+<td>M2</td>
+<td><strong>Layers by phase and altitude.</strong> SM-3 exo-atmospheric midcourse, future GPI in glide phase, SM-6 endo-atmospheric terminal, ESSM and SM-2 inner layers.</td>
+<td>Where does SM-6 sit, and what does it not replace?</td>
+<td>Treating SM-6 as a substitute for broad-area midcourse defense.</td>
+</tr>
+<tr>
+<td>M3</td>
+<td><strong>Evidence ladder.</strong> Vendor claim, concept animation, simulated engagement, developmental live intercept, DOT&amp;E operational test, combat record.</td>
+<td>How much weight can this claim carry?</td>
+<td>Reading FTX-40 as a live intercept. Reading "combat-proven" as an operational-test pass.</td>
+</tr>
+<tr>
+<td>M4</td>
+<td><strong>Two upgrade axes.</strong> Electronics and software (Block IA, Dual I and II, SWUP, IAU) versus kinematics (Block IB's new motor).</td>
+<td>How risky is this roadmap item?</td>
+<td>Expecting a new-motor program to move at software speed.</td>
+</tr>
+<tr>
+<td>M5</td>
+<td><strong>Magazine economics.</strong> The VLS cell is the scarce unit. Cost-exchange ratios ignore the value of what is protected.</td>
+<td>When is SM-6 worth firing?</td>
+<td>"Too expensive to use" or "always fire the best round." Both skip the layer question.</td>
+</tr>
+</tbody>
+</table>
+<h2>Sources</h2>
+<ul>
+<li><a href="spine.html">SM-6 assessment page</a>, sections "Performance logic", "Saturation and economics", "Variant roadmap", "Enterprise-architecture view"</li>
+<li><a href="https://www.youtube.com/watch?v=-q-ieXZgrhY">MDA, Glide Phase Interceptor scenario animation (video)</a></li>
+<li><a href="https://www.csis.org/analysis/cost-and-value-air-and-missile-defense-intercepts">CSIS, Cost and Value in Air and Missile Defense Intercepts</a></li>
+<li><a href="https://www.dote.osd.mil/Portals/97/pub/reports/FY2024/navy/2024sm-6.pdf">DOT&amp;E FY2024 SM-6</a></li>
+<li><a href="elicit.html">elicit-light-research</a> (Adams et al. 2025: each kill-chain link multiplies the odds)</li>
+</ul>
+<h2>Actions</h2>
+<ol>
+<li><strong>10m.</strong> Watch the MDA GPI animation (8 minutes). Sketch the layers it shows and where SM-6 fires.</li>
+<li><strong>20m.</strong> For each model M1 to M5, write When to use, How to apply, and one SM-6 example from the spine page.</li>
+<li><strong>15m.</strong> Draw how the models connect. M1 explains reach and fragility. M2 places SM-6 in the stack. M3 gates every claim. M4 explains roadmap risk. M5 limits use. Map M1 onto the six-row Sense, Share, Decide, Act, Assess, Sustain table on the spine page.</li>
+</ol>
+<h2>Retrieval check</h2>
+<div class="callout question" markdown="0"><div class="callout-title">Question</div><p>Someone says "SM-6 can kill hypersonic missiles." Which mental model do you reach for first, and why?</p></div>
+
+<div class="callout success" markdown="0"><div class="callout-title">Answer cues</div><p><strong>M3 first.</strong> FTX-40 (March 2025) tracked a maneuvering hypersonic-representative target and ran a <em>simulated</em> SM-6 engagement. No missile was fired. MDA called it a building block toward a live intercept, and no live intercept was public as of October 2026. <strong>Then M2.</strong> SM-6's counter-hypersonic role is a limited terminal layer. The Glide Phase Interceptor is meant to engage earlier. <strong>Then M1.</strong> The chain used space-sensor data (HBTSS), so the claim also depends on sensors the missile does not own.</p></div>
+
+<h2>Exit criteria</h2>
+<ul>
+<li class="task"><input type="checkbox" disabled> M1 to M5 captured with when, how, and failure</li>
+<li class="task"><input type="checkbox" disabled> One diagram connecting the models</li>
+</ul></article>
+  <footer class="docfoot">
+    Rendered from <code>Learning\one-day-mastery\sm-6\blocks\02-mental-models.md</code>. The Obsidian vault is the source of truth. Open sources only; study material. Citations <span class="cite">S#</span> link to the pack's source ledger.
+    <div class="prevnext"><a href="block-01-core-concepts.html">&larr; Previous</a><a href="block-03-active-practice.html">Next &rarr;</a></div>
+  </footer>
+</main>
+<script type="module">
+import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
+const dark=(document.documentElement.getAttribute("data-theme")||"").endsWith("dark");
+mermaid.initialize({startOnLoad:true,theme:dark?"dark":"default",securityLevel:"strict"});
+</script>
+</body>
+</html>

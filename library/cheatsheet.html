@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cheatsheet — Raytheon SM-6 | Learn SM-6</title>
+<meta name="description" content="">
+<link rel="icon" href="../assets/icons/icon-192.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="library.css">
+<script>try{var p=JSON.parse(localStorage.getItem("appPalette"))||"github",m=JSON.parse(localStorage.getItem("appMode"))||"dark";document.documentElement.setAttribute("data-theme",p+"-"+m);}catch(e){document.documentElement.setAttribute("data-theme","github-dark");}</script>
+</head>
+<body>
+<header class="topbar">
+  <a href="../index.html" class="home">&larr; Learn SM-6 console</a>
+  <span class="crumb">Library · Reference</span>
+  <a href="index.html" class="home">All pages</a>
+</header>
+<main class="doc">
+  <div class="kicker">Reference</div>
+  <h1 class="doctitle">Cheatsheet — Raytheon SM-6</h1>
+  
+  
+  <article>
+<p>Decision rules and tells only. Not a glossary dump.</p>
+<h2>Rules</h2>
+<ul>
+<li>When a claim is about <strong>reach</strong>, ask which sensor and network carried the track, because SM-6's over-the-horizon reach belongs to the kill chain, not the missile alone.</li>
+<li>When a claim is about <strong>hypersonic defense</strong>, say "limited terminal layer, live intercept not public as of Oct 2026", because FTX-40 was simulated.</li>
+<li>When a claim says <strong>proven</strong> or <strong>combat-proven</strong>, ask "proven by which event, and did DOT&amp;E assess it?", because DOT&amp;E says FTM-32 did not establish operational effectiveness.</li>
+<li>When you see a <strong>range number</strong>, drop it, because official range is classified and explainer figures are estimates.</li>
+<li>When you see a <strong>unit cost</strong>, state its basis and year, because constant-FY2004 APUC and then-year cost differ by more than a third.</li>
+<li>When you see a <strong>contract ceiling or production objective</strong>, pair it with the appropriation, because a ceiling is not a funded buy.</li>
+<li>When someone proposes SM-6 for a <strong>low-end threat</strong>, ask what cheaper layer covers it, because one round uses one cell.</li>
+<li>When a roadmap item changes the <strong>motor</strong>, expect slower schedule and more test risk than a software change.</li>
+</ul>
+<h2>Tells of an overclaim</h2>
+<ul>
+<li>"Invulnerable", "unstoppable", "proven against all"</li>
+<li>A precise range or Mach number with no official source</li>
+<li>FTX-40 described as an intercept</li>
+<li>Army "SM-6 air defense battery" cited from the Valiant Shield simulation</li>
+</ul></article>
+  <footer class="docfoot">
+    Rendered from <code>Learning\one-day-mastery\sm-6\reference\cheatsheet.md</code>. The Obsidian vault is the source of truth. Open sources only; study material. Citations <span class="cite">S#</span> link to the pack's source ledger.
+    <div class="prevnext"><a href="glossary.html">&larr; Previous</a><a href="decision-card.html">Next &rarr;</a></div>
+  </footer>
+</main>
+<script type="module">
+import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
+const dark=(document.documentElement.getAttribute("data-theme")||"").endsWith("dark");
+mermaid.initialize({startOnLoad:true,theme:dark?"dark":"default",securityLevel:"strict"});
+</script>
+</body>
+</html>

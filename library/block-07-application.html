@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Block 7: Application | Learn SM-6</title>
+<meta name="description" content="">
+<link rel="icon" href="../assets/icons/icon-192.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="library.css">
+<script>try{var p=JSON.parse(localStorage.getItem("appPalette"))||"github",m=JSON.parse(localStorage.getItem("appMode"))||"dark";document.documentElement.setAttribute("data-theme",p+"-"+m);}catch(e){document.documentElement.setAttribute("data-theme","github-dark");}</script>
+</head>
+<body>
+<header class="topbar">
+  <a href="../index.html" class="home">&larr; Learn SM-6 console</a>
+  <span class="crumb">Library · Day blocks</span>
+  <a href="index.html" class="home">All pages</a>
+</header>
+<main class="doc">
+  <div class="kicker">Day blocks</div>
+  <h1 class="doctitle">Block 7: Application</h1>
+  
+  
+  <article>
+<p><strong>Time:</strong> 60 minutes
+<strong>Goal:</strong> Apply to a real task today
+<strong>Pack:</strong> Raytheon SM-6 (<code>sm-6</code>)</p>
+<h2>Focus from mind map</h2>
+<p>Produce one durable artifact that a decision-maker or architect could use. Pick one option.</p>
+<h2>Sources</h2>
+<ul>
+<li><a href="spine.html">SM-6 assessment page</a>, sections "Enterprise-architecture view", "Bottom line", "Evidence and test record"</li>
+<li><a href="decision-card.html">decision-card</a></li>
+<li><a href="https://www.youtube.com/watch?v=GDe55DKViwc">CSIS, MDA and the 2025 Budget with LTG Heath Collins (video)</a></li>
+<li><a href="https://www.csis.org/analysis/rebuilding-us-missile-inventory-multiyear-project">CSIS, Rebuilding U.S. Missile Inventory (May 2026)</a></li>
+</ul>
+<h2>Actions</h2>
+<h3>Option A (default): evidence-graded brief, one page</h3>
+<ol>
+<li><strong>10m.</strong> Bottom line in three sentences.</li>
+<li><strong>20m.</strong> A table with at least six rows: claim, status (proven, proven with limits, not public), event, source.</li>
+<li><strong>15m.</strong> Three investments that may matter more than missile range, each with a reason from the sources: sensors, network resilience, magazine depth and production, lower-cost effectors, or operational testing.</li>
+<li><strong>10m.</strong> Open questions with a "known-by" signal for each: FTM-43 result, a Block IB restart decision, the next DOT&amp;E annual report, FY2027 appropriation for SM-6.</li>
+<li><strong>5m.</strong> Learning record.</li>
+</ol>
+<h3>Option B: enterprise-architecture view</h3>
+<ol>
+<li>Fill the Sense, Share, Decide, Act, Assess, Sustain table for the naval and the joint or land implementation, with one assurance concern and one interface risk per row.</li>
+<li>Render it as a diagram (Mermaid in the note, or <code>/drawio</code> for a Draw.io file in <code>C:\output\</code>).</li>
+<li>Write which row is the binding constraint today and why.</li>
+</ol>
+<p>Save the artifact to <code>learning-records/</code> with today's date in the file name.</p>
+<h2>Retrieval check</h2>
+<div class="callout question" markdown="0"><div class="callout-title">Question</div><p>What did you ship today that proves working fluency in Raytheon SM-6?</p></div>
+
+<div class="callout success" markdown="0"><div class="callout-title">Answer cues</div><p>A good artifact names events, not adjectives. It separates FTM-32 (live) from FTX-40 (simulated), cites DOT&amp;E on operational effectiveness, states cost with its basis, and ends with dated signals to watch. If the brief could have been written without the sources, it does not count.</p></div>
+
+<h2>Exit criteria</h2>
+<ul>
+<li class="task"><input type="checkbox" disabled> Application artifact saved in <code>learning-records/</code></li>
+<li class="task"><input type="checkbox" disabled> Learning record written (what evidence shows you can do it?)</li>
+</ul></article>
+  <footer class="docfoot">
+    Rendered from <code>Learning\one-day-mastery\sm-6\blocks\07-application.md</code>. The Obsidian vault is the source of truth. Open sources only; study material. Citations <span class="cite">S#</span> link to the pack's source ledger.
+    <div class="prevnext"><a href="block-06-spaced-review.html">&larr; Previous</a><span></span></div>
+  </footer>
+</main>
+<script type="module">
+import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
+const dark=(document.documentElement.getAttribute("data-theme")||"").endsWith("dark");
+mermaid.initialize({startOnLoad:true,theme:dark?"dark":"default",securityLevel:"strict"});
+</script>
+</body>
+</html>

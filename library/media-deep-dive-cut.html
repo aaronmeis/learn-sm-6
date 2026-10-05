@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deep dive cut | Learn SM-6</title>
+<meta name="description" content="Pointer to the narrated Deep Dive Cut video for Raytheon SM-6. The MP4 stays in heavy output.">
+<link rel="icon" href="../assets/icons/icon-192.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="library.css">
+<script>try{var p=JSON.parse(localStorage.getItem("appPalette"))||"github",m=JSON.parse(localStorage.getItem("appMode"))||"dark";document.documentElement.setAttribute("data-theme",p+"-"+m);}catch(e){document.documentElement.setAttribute("data-theme","github-dark");}</script>
+</head>
+<body>
+<header class="topbar">
+  <a href="../index.html" class="home">&larr; Learn SM-6 console</a>
+  <span class="crumb">Library · Media</span>
+  <a href="index.html" class="home">All pages</a>
+</header>
+<main class="doc">
+  <div class="kicker">Media</div>
+  <h1 class="doctitle">Deep dive cut</h1>
+  <p class="lead">Pointer to the narrated Deep Dive Cut video for Raytheon SM-6. The MP4 stays in heavy output.</p>
+  
+  <article>
+<p>Pack: <a href="hub.html">00 - Raytheon SM-6 Hub</a></p>
+<h2>Business Explanation</h2>
+<div class="callout info" markdown="0"><div class="callout-title">Business Explanation</div><p>A single study video for Raytheon SM-6 that walks the NotebookLM slide deck with a question card before each slide. The narration corrects the slides where they overstate the sources. The video file stays in heavy output, not the vault.</p></div>
+
+<h2>Video</h2>
+<p>About 11 minutes 54 seconds. 13 slides, each inset on the plate, with a question card before every slide after the first. Narrated; music bed ducked under speech.</p>
+<p><code>C:\output\obsidian\notebooklm\odm-sm-6\odm-sm-6-deep-dive-cut.mp4</code></p>
+<h2>Corrections made in narration</h2>
+<ul>
+<li>Slide 1: Mk 72 is the booster; the slide reuses it for the dual-thrust motor. Range rings are decorative, not range data.</li>
+<li>Slide 3: 'Propulsion' is labeled twice; it is one booster and one dual-thrust motor.</li>
+<li>Slide 5: Link 16 appears under Share but is not in the pack's sources.</li>
+<li>Slide 6: 'Proven' on air warfare and terminal BMD is read as demonstrated in test; DOT&amp;E has not established operational effectiveness.</li>
+<li>Slide 7: SM-2 is a medium-to-long-range area-defense missile, not close-in; RAM is not in the pack's sources.</li>
+<li>Slide 11: 'Lack of at-sea reload' overstates it; the sources say reloading at sea is constrained.</li>
+<li>Slide 13: the $2K drone and $2B destroyer figures are illustrations, not sourced.</li>
+</ul>
+<h2>Rebuild</h2>
+<p>Script: <em>cut-script.json</em> · <code>python C:\projects\claude\scripts\odm-cut\odm_cut.py --slug sm-6</code></p>
+<p>Voice clips are reused if present, so a rebuild after picture-only edits costs no credits. Delete a clip in <code>_deep_dive_cut\</code> to re-voice that line.</p>
+<p>Not published. Publish only on an explicit ask.</p></article>
+  <footer class="docfoot">
+    Rendered from <code>Learning\one-day-mastery\sm-6\Deep Dive Cut.md</code>. The Obsidian vault is the source of truth. Open sources only; study material. Citations <span class="cite">S#</span> link to the pack's source ledger.
+    <div class="prevnext"><span></span><a href="media-cut-script.html">Next &rarr;</a></div>
+  </footer>
+</main>
+<script type="module">
+import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
+const dark=(document.documentElement.getAttribute("data-theme")||"").endsWith("dark");
+mermaid.initialize({startOnLoad:true,theme:dark?"dark":"default",securityLevel:"strict"});
+</script>
+</body>
+</html>

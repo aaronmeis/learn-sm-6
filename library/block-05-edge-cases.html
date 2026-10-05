@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Block 5: Edge cases | Learn SM-6</title>
+<meta name="description" content="">
+<link rel="icon" href="../assets/icons/icon-192.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="library.css">
+<script>try{var p=JSON.parse(localStorage.getItem("appPalette"))||"github",m=JSON.parse(localStorage.getItem("appMode"))||"dark";document.documentElement.setAttribute("data-theme",p+"-"+m);}catch(e){document.documentElement.setAttribute("data-theme","github-dark");}</script>
+</head>
+<body>
+<header class="topbar">
+  <a href="../index.html" class="home">&larr; Learn SM-6 console</a>
+  <span class="crumb">Library · Day blocks</span>
+  <a href="index.html" class="home">All pages</a>
+</header>
+<main class="doc">
+  <div class="kicker">Day blocks</div>
+  <h1 class="doctitle">Block 5: Edge cases</h1>
+  
+  
+  <article>
+<p><strong>Time:</strong> 45 minutes
+<strong>Goal:</strong> Exceptions, traps, failure modes
+<strong>Pack:</strong> Raytheon SM-6 (<code>sm-6</code>)</p>
+<h2>Focus from mind map</h2>
+<p>Most SM-6 mistakes are about evidence and numbers, not engineering. Work the trap table below.</p>
+<h2>Sources</h2>
+<ul>
+<li><a href="spine.html">SM-6 assessment page</a>, sections "Risks and unknowns", "Evidence and test record", "Deployment and industrial base"</li>
+<li><a href="https://www.dote.osd.mil/Portals/97/pub/reports/FY2024/navy/2024sm-6.pdf">DOT&amp;E FY2024 SM-6</a></li>
+<li><a href="https://www.dote.osd.mil/Portals/97/pub/reports/FY2022/navy/2022sm-6.pdf">DOT&amp;E FY2022 SM-6</a></li>
+<li><a href="https://www.mda.mil/news/25news0002.html">MDA FTX-40 release</a></li>
+<li><a href="https://www.navalnews.com/naval-news/2025/07/another-u-s-navy-hypersonic-program-halted-in-strategic-pause/">Naval News, Block IB strategic pause</a></li>
+<li><a href="https://www.csis.org/analysis/rebuilding-us-missile-inventory-multiyear-project">CSIS, Rebuilding U.S. Missile Inventory (May 2026)</a></li>
+</ul>
+<h2>Actions</h2>
+<ol>
+<li><strong>15m.</strong> Read the two DOT&amp;E reports (two pages each) and "Risks and unknowns".</li>
+<li><strong>20m.</strong> Cover the right two columns of the table. For each symptom, say the cause and the fix aloud, then check.</li>
+<li><strong>10m.</strong> Add your top three traps to <a href="cheatsheet.html">cheatsheet</a>.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Symptom</th>
+<th>Cause</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>A source states a precise SM-6 range</td>
+<td>Range is classified. Explainer videos repeat unofficial estimates.</td>
+<td>Say "classified; open-source estimates vary" and cite no number as fact.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>"SM-6 is proven against hypersonics"</td>
+<td>FTX-40 was tracking plus a simulated engagement. FTM-43 not publicly flown.</td>
+<td>Place the claim on the evidence ladder. Say "limited terminal defense, live intercept pending".</td>
+</tr>
+<tr>
+<td>3</td>
+<td>"Combat-proven" used as "operationally effective"</td>
+<td>Combat use and DOT&amp;E operational test answer different questions.</td>
+<td>Cite DOT&amp;E FY2024: FTM-32 was not designed to determine effectiveness, lethality, suitability, or survivability.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Block IB "arrives FY2027"</td>
+<td>DOT&amp;E FY2022 date, superseded by the FY2026 budget pause.</td>
+<td>Treat Block IB as developmental. Watch for a restart decision.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Unit cost quoted as $2.97M, $4.3M, or higher</td>
+<td>Constant FY2004 APUC, then-year budget cost, and other bases differ.</td>
+<td>State the basis and year with every number.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>"$24.4B for 500 a year" read as funded buys</td>
+<td>Framework ceiling and production objective are not appropriations.</td>
+<td>Pair it with the FY2027 request (540) and the 36 to 39 month lead time.</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Talisman Sabre sinking read as "kills warships"</td>
+<td>A sinking exercise target is not a defended, maneuvering peer combatant.</td>
+<td>Say "demonstrated strike, effect against defended ships not public".</td>
+</tr>
+<tr>
+<td>8</td>
+<td>"One missile replaces SM-2, SM-3, ESSM"</td>
+<td>Multi-mission does not mean optimal for every layer. One round uses one cell.</td>
+<td>Use the layer model. SM-3 owns midcourse. ESSM gives magazine density.</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Intact missile assumed to mean intact engagement</td>
+<td>Over-the-horizon shots depend on remote track, network, identity, authorization.</td>
+<td>Ask which link of Sense, Share, Decide, Act is assumed.</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Contested-spectrum or cyber resilience asserted either way</td>
+<td>DOT&amp;E found insufficient public data. Classified data may exist.</td>
+<td>Say "uncertain on the public record", not "fails" or "immune".</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Variant names mixed up</td>
+<td>Air-warfare blocks, BMD configurations, and software upgrades overlap.</td>
+<td>Read the variant roadmap as a family tree with two upgrade axes.</td>
+</tr>
+<tr>
+<td>12</td>
+<td>SM-6-only combat expenditure quoted</td>
+<td>Public Red Sea and Epic Fury figures combine SM-2 and SM-6 or are estimates.</td>
+<td>Name the source and say "combined" or "estimated".</td>
+</tr>
+</tbody>
+</table>
+<h2>Retrieval check</h2>
+<div class="callout question" markdown="0"><div class="callout-title">Question</div><p>What edge case would break a naive approach to Raytheon SM-6?</p></div>
+
+<div class="callout success" markdown="0"><div class="callout-title">Answer cues</div><p>Treating a demonstration as operational effectiveness (traps 2, 3, 7). Quoting a classified number as fact (trap 1). Mixing cost bases (trap 5). Each one makes a brief look confident and be wrong.</p></div>
+
+<h2>Exit criteria</h2>
+<ul>
+<li class="task"><input type="checkbox" disabled> Twelve traps worked closed-book</li>
+<li class="task"><input type="checkbox" disabled> Top three traps on the cheatsheet</li>
+</ul></article>
+  <footer class="docfoot">
+    Rendered from <code>Learning\one-day-mastery\sm-6\blocks\05-edge-cases.md</code>. The Obsidian vault is the source of truth. Open sources only; study material. Citations <span class="cite">S#</span> link to the pack's source ledger.
+    <div class="prevnext"><a href="block-04-teach-it.html">&larr; Previous</a><a href="block-06-spaced-review.html">Next &rarr;</a></div>
+  </footer>
+</main>
+<script type="module">
+import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
+const dark=(document.documentElement.getAttribute("data-theme")||"").endsWith("dark");
+mermaid.initialize({startOnLoad:true,theme:dark?"dark":"default",securityLevel:"strict"});
+</script>
+</body>
+</html>
